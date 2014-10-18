@@ -1,4 +1,4 @@
-package predictions;
+package com.jwsur.ch1;
 
 import java.io.Serializable;
 

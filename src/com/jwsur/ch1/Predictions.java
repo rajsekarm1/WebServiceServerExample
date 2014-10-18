@@ -1,4 +1,4 @@
-package predictions;
+package com.jwsur.ch1;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -73,6 +73,7 @@ public class Predictions {
 	    encoder.writeObject(predictions); // serialize to XML
 	    encoder.close();
 	    xml = out.toString(); // stringify
+	    System.out.println("the xml string value+"+xml);
 	}
 	catch(Exception e) { }
 	return xml;

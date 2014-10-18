@@ -1,6 +1,6 @@
 <jsp:useBean id    = "preds" 
-	     type  = "predictions.Predictions" 
-	     class = "predictions.Predictions"> 
+	     type  = "com.jwsur.ch1.Predictions" 
+	     class = "com.jwsur.ch1.Predictions"> 
   <% 
      String verb = request.getMethod();
 
