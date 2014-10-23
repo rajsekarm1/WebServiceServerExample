@@ -1,4 +1,4 @@
-package com.jwsur.ch2.adages;
+package com.jwsur.ch2.jersey;
 
 import java.net.InetSocketAddress;
 import javax.ws.rs.ext.RuntimeDelegate;
@@ -10,7 +10,7 @@ import com.sun.net.httpserver.HttpServer;
    a web server such as Tomcat or Jetty. */
 public class AdagesPublisher{
     private static final int port = 9876;
-    private static final String uri = "/resourcesA/";
+    private static final String uri = "/webservice/ch2/adages/";
     private static final String url = "http://localhost:" + port + uri;
     public static void main(String[ ] args) {
 	new AdagesPublisher().publish();

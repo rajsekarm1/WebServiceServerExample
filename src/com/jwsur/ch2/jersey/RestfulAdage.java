@@ -1,4 +1,4 @@
-package com.jwsur.ch2.adages;
+package com.jwsur.ch2.jersey;
 
 import java.util.Set;
 import java.util.HashSet;

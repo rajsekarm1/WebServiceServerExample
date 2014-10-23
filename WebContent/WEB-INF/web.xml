@@ -18,7 +18,11 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>predictor</servlet-name>
-    <url-pattern>/ch2/*</url-pattern>
+    <servlet-name>jersey</servlet-name>
+    <url-pattern>/ch2/adages/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+   <servlet-name>predictor</servlet-name>
+    <url-pattern>/ch2/prediction/*</url-pattern>
   </servlet-mapping>
 </web-app>
