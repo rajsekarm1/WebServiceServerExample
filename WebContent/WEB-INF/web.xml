@@ -5,6 +5,11 @@
   	<welcome-file>predictions.jsp</welcome-file>
   	<welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  <listener>
+    <listener-class>
+      com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+    </listener-class>
+  </listener>
   <!--  Simple comment -->
   <!--  Second comment -->
   <!-- third comment -->
@@ -17,9 +22,36 @@
     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>  
     <load-on-startup>1</load-on-startup>
   </servlet>
+  	<servlet>
+		<servlet-name>RestletServlet</servlet-name>
+		<servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+		<init-param>
+			<!-- Application class name -->
+			<param-name>org.restlet.application</param-name>
+			<param-value>com.jwsur.ch2.restlet.AdagesApplication</param-value>
+		</init-param>
+	</servlet>
+	 <servlet>
+    <servlet-name>jaxws</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jaxws</servlet-name>
+    <url-pattern>/ch4/javaxws/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>jaxws</servlet-name>
+    <url-pattern>/ch2/javaxws/*</url-pattern>
+  </servlet-mapping>
+<!-- Dispach all requests to the Restlet servlet. -->
+	<servlet-mapping>
+		<servlet-name>RestletServlet</servlet-name>
+		<url-pattern>/ch2/restlet/*</url-pattern>
+	</servlet-mapping>
   <servlet-mapping>
     <servlet-name>jersey</servlet-name>
-    <url-pattern>/ch2/adages/*</url-pattern>
+    <url-pattern>/ch2/jersey/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
    <servlet-name>predictor</servlet-name>
